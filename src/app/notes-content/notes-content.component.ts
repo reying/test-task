@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {Note} from '../app.component';
+import { NotesService } from '../shared/notes.service';
 
 @Component({
   selector: 'app-notes-content',
@@ -8,9 +8,7 @@ import {Note} from '../app.component';
 })
 export class NotesContentComponent implements OnInit {
 
-  @Input() notes: Note[] = []
-
-  constructor() { }
+  constructor(public notesService: NotesService) { }
 
   ngOnInit(): void {
   }

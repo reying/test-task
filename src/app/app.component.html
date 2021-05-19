@@ -2,8 +2,7 @@
   <app-notes-header></app-notes-header>
   <div class="wrapper">
     <app-notes-list></app-notes-list>
-    <app-notes-content
-      [notes]="notes"
-    ></app-notes-content>
+    <app-notes-content></app-notes-content>
   </div>
+  <app-add-note-popup *ngIf="notesService.adding"></app-add-note-popup>
 </div>

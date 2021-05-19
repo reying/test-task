@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
-import {Note} from '../app.component';
+import { Component, OnInit } from '@angular/core'
+import { NotesService } from '../shared/notes.service';
 
 @Component({
   selector: 'app-notes-list',
@@ -8,13 +8,17 @@ import {Note} from '../app.component';
 })
 export class NotesListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public notesService: NotesService) { }
 
   ngOnInit(): void {
   }
 
   onClick(title: string) {
-    this.onToggle.emit(title)
+    this.notesService.onToggle(title)
+  }
+
+  onOpen() {
+    this.notesService.onOpenPopup()
   }
 
 }

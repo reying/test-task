@@ -1,6 +1,7 @@
+<button class="add-note" (click)="onOpen()">Добавить заметку</button>
 <ul>
   <li 
-    *ngFor="let note of notes;"
+    *ngFor="let note of notesService.notes"
     [class.notes__list--current]="note.current"
     (click)="onClick(note.title)"
   >

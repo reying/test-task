@@ -1,0 +1,7 @@
+<div class="container">
+  <h1 class="popup__title">Новая заметка</h1>
+  <input type="text" placeholder="Заголовок" [(ngModel)]="notesService.saveTitle">
+  <textarea placeholder="Текст" [(ngModel)]="notesService.saveContent"></textarea>
+  <button (click)="onAdd()">Добавить</button>
+  <button (click)="onClose()">Закрыть</button>
+</div>
