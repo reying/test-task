@@ -1,0 +1,35 @@
+.container {
+  // width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+app-notes-header,
+app-notes-list,
+app-notes-content {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.wrapper {
+  flex-grow: 1;
+  display: flex;
+  margin-top: 5px;
+}
+
+app-notes-header {
+  display: flex;
+  height: 70px;
+}
+
+app-notes-list {
+  flex-basis: 50%;
+  margin-right: 5px;
+}
+
+app-notes-content {
+  padding: 30px;
+}

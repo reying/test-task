@@ -1,0 +1,6 @@
+<div class="container" *ngFor="let note of notes">
+  <div *ngIf="note.current">
+    <h1>{{note.title}}</h1>
+    <p>{{note.content}}</p>
+  </div>
+</div>
