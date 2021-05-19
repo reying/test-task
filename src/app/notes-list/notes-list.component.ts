@@ -8,9 +8,6 @@ import {Note} from '../app.component';
 })
 export class NotesListComponent implements OnInit {
 
-  @Input() notes: Note[] = []
-  @Output() onToggle = new EventEmitter<string>()
-
   constructor() { }
 
   ngOnInit(): void {
